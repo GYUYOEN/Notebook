@@ -1,9 +1,9 @@
-package exam02_N1;
+package exam02_N;
 
 // 자바의 기본 기능 외의 추가 기능을 사용하기 위해 작성을 하는 구문
 import java.util.*;
 
-public class Sample02_N1 {
+public class Sample01_N {
 	// 멤버 변수
 	private int number = 0;
 	private String name = "hyun";
@@ -11,7 +11,7 @@ public class Sample02_N1 {
 	
 	// 생성자 : 클래스명과 동일한 이름을 사용하는 메서드를 생성자라고 한다. 생성자는 리턴 타입이 없다.(ex) void)
 	// 자바에서는 클래스를 사용할 때 반드시 객체로 생성하여 사용해야한다. 이 때 객체를 생성할 때 필요한 것이 생성자이다.
-	public Sample02_N1( ) {
+	public Sample01_N( ) {
 		// 현재 이 생성자는 기본생성자로 클래스에 작성을 하지 않아도 기본적으로 생성되어 사용됨.
 		// JVM에서는 기본적인 거라 생성자를 만들지 않아도 있는걸로 만들어줌
 		// 우리는 이 생성자가 없으면 안된다고 생각하고 있어야됨.
