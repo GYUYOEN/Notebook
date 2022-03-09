@@ -38,6 +38,7 @@ public class Sample01_N {
 		System.out.println("후위 연산 결과 : " + i7);
 		
 		System.out.println("전우 후위에 사용한 변수의 값 : " + i4 + "," + i6);
+		
 	}
 
 }
