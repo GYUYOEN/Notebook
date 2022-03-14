@@ -1,20 +1,33 @@
 package exam02_N;
 
-import java.util.Random;
+import java.util.Scanner;
 
 public class Sample10_N {
 
 	public static void main(String[] args) {
 		/*
-		 * 난수값(랜덤값) 생성
-		 *     import java.util.Ramdom; 을 임포드한 후 다음에 코드 작성
+		 * 같은 문자열인지 비교할 때
+		 *      문자열변수명.equals(문자열값)
 		 */
-		Random random = new Random();
+		Scanner sc = new Scanner(System.in);
+		String s = "문자열";
 		
-		for(int i = 0; i < 10; i++) {
-			System.out.println(random.nextInt(100));
+		System.out.print("문자열 입력 : ");
+		String sInput = sc.next();
+		
+		System.out.printf("%s / %s\n", s, sInput);
+		
+		if(s.equals(sInput)) { 
+			System.out.println("equals 로 비교했을 때 동일한 문자열로 판별");
+		} else {
+			System.out.println("equals 로 비교했을 때 동일하지 않은 문자열로 판별");
 		}
-
+		
+		if(s == sInput) {
+			System.out.println("== 로 비교했을 때 동일한 문자열로 판별");
+		} else {
+			System.out.println("== 로 비교했을 때 동일하지 않은 문자열로 판별");
+		}
 	}
 
 }

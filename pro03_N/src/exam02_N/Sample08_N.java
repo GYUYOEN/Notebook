@@ -4,77 +4,51 @@ public class Sample08_N {
 
 	public static void main(String[] args) {
 		/*
-		 * 문자열에서 문자만 추출하는 방법
-		 *       문자열변수명 .charAt(위치값) : 문자열에서 위치값에 해당하는 문자를 추출
-		 *       무조건 0 부터 시작
-		 *       
-		 * 믄지옇의 길이를 알아내는 방법
-		 *       문자열변수명 .length() : 문자열의 문자수를 알려준다.
-		 */
-		String s = "Hello Java Programming";
-		char c = s.charAt(0);
-		System.out.println(c);
-		System.out.println("문자열 길이 : " + s.length()); // 띄어쓰기 포함
-		
-		/* 
-		 * 1. 다음의 문자열에서 대문자의 수와 소문자의 수를 구하시오.
-		 * 2. 다음의 문자열에서 단어의 수를 구하시오. (단어는 공백을 기준으오 구분하여 보면 된다.)
-		 */
-		
-		
-		// 1. 다음의 문자열에서 대문자의 수와 소문자의 수를 구하시오.
-		int c1 = 0, c2 = 0;
-		
-		s = "Hello Java Programming";
-		for(int i = 0; i < s.length(); i++) {
-			if(s.charAt(i) >= 'A' && s.charAt(i) <= 'Z') {
-				c1 ++;
-			} else if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
-				c2++;
-			}
+		 * while 문
+		 *     while(조건식) {
+		 *        반복 수령할 코드 작성
+		 *     }
+		 * for 문과 다르게 초기식, 증감식에 대한 형식 없지만 일정 횟수 반복을 위해서는
+		 * for 문과 동일하게 초기식, 증감식 작성이 필요하다.
+		 */ 
+		int i = 0;
+		while(i < 5) {
+			System.out.println("i -> " + i);
+			i += 1;
 		}
-		System.out.printf("대문자 수 : %d\n소문자 수 : %d\n", c1, c2);
 		
+		/*
+		 * do ... while 문
+		 *      do {
+		 *         반복 수행할 코드 작성
+		 *      } while(조건식); // 세미콜론 꼭 찍어주기
+		 * 일단 최초 1위는 무조건 반복 진행을 하나 다음(2번째) 반복 부터는 조건식의
+		 * 결과가 참일 때에만 진향을 하게 된다.
+		 */ 
 		
-		// 2. 다음의 문자열에서 단어의 수를 구하시오. (단어는 공백을 기준으오 구분하여 보면 된다)
-		boolean sStart = false; // 문자열 시작 -> 영문자 범위 이면 true. flag
-		boolean sEnd = false; // 문자열 끝 -> 공백이면 true. flag
-		int word = 0;
+		i = 0;
+		do {
+			System.out.println("i -> " + i);
+			i += 1;
+		} while(i < 5);
 		
-		for(int i = 0; i < s.length(); i ++) {
-			if(s.charAt(i) >= 'A' && s.charAt(i) < 'Z') { 
-				sStart = true;
-			} else if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
-				sStart = true;
-			} else if(s.charAt(i) == ' ') {
-				sEnd = true;
-			}
-			
-			if(sStart && sEnd) {
-				word++;
-				sStart = false; sEnd = false;
+		/*
+		 * break 문
+		 *     - 반복문을 강제로 종료시키기 위해 사용하는 구문
+		 *     
+		 * continue 문
+		 *     - 반복문 안에서 다음 실행코드의 진행을 막고 다시 반복문의 처음으로 돌려보내주는 구문
+		 */
+		i = 0;
+		while(i < 10) {
+			i += 1;
+			if(i % 3 ==0) {
+				System.out.println("i -> " + i);
+			} else {
 				continue;
 			}
-			
-			if(i == s.length() - 1) { // 문자가 끝에 왔을 떄
-				if(sStart) {
-					word++;
-				}
-			}
+			System.out.println("continue 가 되면 이 출력은 동작 안함");
 		}
-		System.out.println("단어 수 : " + word);
-		
-		// 내가 한 방법
-		int wordcount = 0;
-		for(int i = 0; i < s.length(); i++) {
-			if(s.charAt(i) == ' ') {
-				wordcount++;
-			}
-			if(i == s.length() - 1) {
-				wordcount++;
-			}
-		}
-		System.out.println("단어 수 : " + wordcount);
 	}
-}
 
+}

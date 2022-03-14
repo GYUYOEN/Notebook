@@ -1,43 +1,43 @@
 package exam02_N;
 
+import java.util.Scanner;
+
 public class Sample06_N {
 
 	public static void main(String[] args) {
 		/*
-		 * 중첩 반복문
+		 * 1 ~ 10 까지의 누적합을 구하시오.
+		 * 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55
 		 */
-		for(int i = 1; i <= 3; i++) {
-			System.out.println("i가 1번 반복할 때마다");
-			for(int j = 1; j <= 3; j++) {
-				System.out.println("j 의 반복은 3번씩 총 9 번 이루어진다.");
-			}
+		int tot = 0;
+		for(int i = 1; i <= 10; i++) {
+			tot += i;	// tot = tot + i;
 		}
+		System.out.println("1 ~ 10 까지의 누적합 -> " + tot);
 		
 		/*
-		 * 구구단
+		 * 사용자가 입력한 정수값에 해당하는 구구단을 출력하시오.
 		 */
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수값 입력 : ");
+		int num = sc.nextInt();
+		
 		for(int i = 1; i <= 9; i++) {
-			for(int j = 1; j <= 9; j++) {
-				System.out.printf("%d X %d = %d\t", i, j, i * j);
-			}
-			System.out.print("\n");
+			System.out.printf("%d x %d = %d\n", num, i, num * i);
 		}
 		
 		/*
-		 * 다음의 결과가 나올 수 있도록 중첩반복문을 사용하시오. (띄어쓰기는 \t 를 사용하도록 한다.)
-		 * 
-		 * 1
-		 * 2    3
-		 * 4    5    6
-		 * 7    8    9    10
-		 * 11   12   13   14   15
+		 * 구구단을 출력할 때 한 줄에 3개의 결과가 출력되도록 하시오.
 		 */
-		int n = 0;
-		for(int i = 1; i <= 5; i++) {
-			for(int j = 1; j <= i; j++) {
-				System.out.print(++n + "\t");
+		int cnt = 0;
+		for(int i = 1; i <= 9; i++) {
+			System.out.printf("%d x %d = %d\t", num, i, num * i);
+			cnt++;
+			if(cnt == 3) {
+				System.out.print("\n");
+				cnt = 0;
 			}
-			System.out.print("\n");
 		}
 	}
 

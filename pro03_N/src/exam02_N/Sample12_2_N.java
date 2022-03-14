@@ -3,7 +3,7 @@ package exam02_N;
 import java.util.Scanner;
 import java.util.Random;
 
-public class Sample11_2_N {
+public class Sample12_2_N {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
