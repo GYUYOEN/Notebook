@@ -17,8 +17,7 @@ public class Sample04_N {
 			num = sc.nextInt();
 			if(num >= 1 && num <= 5) {
 				break;
-			}
-			if(i == 2) {
+			} else if(i == 2) {
 				System.out.print("입력 횟수를 초과하였습니다.");
 			}
 		}

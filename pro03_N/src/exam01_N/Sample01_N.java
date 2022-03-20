@@ -1,4 +1,4 @@
-package exam01_N;
+3package exam01_N;
 
 public class Sample01_N {
 

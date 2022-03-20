@@ -9,7 +9,7 @@ public class Sample03_N {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// String sInput = sc.next(); -> next는 공백을 기준으로 잘라서 앞에 있는 값만 저장, 출력
+		// String sInput = sc.next(); // -> next는 공백을 기준으로 잘라서 앞에 있는 값만 저장, 출력
 		String sInput = sc.nextLine();
 		
 		System.out.println("입력 문자열 : " + sInput);

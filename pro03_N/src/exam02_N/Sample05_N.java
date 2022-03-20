@@ -39,10 +39,17 @@ public class Sample05_N {
 					System.out.println("종료 메뉴를 선책했습니다.");
 					existed = true;
 					break;
-				default:
-					System.out.println("잘못된 메뉴 번호 입니다. 다시 입력하세요. ");
 			}
+			
 			if(existed) break;  // 코드 라인 줄이기 위해 중괄호 생략 가능 (주의 : 1줄만 가능)
+			
+			if(menu != 1 || menu != 2 || menu != 3 || menu != 4 || menu != 9) {
+				if(i == 2) {
+					System.out.println("입력횟수를 초과하였습니다.");
+				} else {
+				System.out.println("잚못 입력했습니다. 다시 입력하세요.");
+				}
+			}
 		}
 	}
 
