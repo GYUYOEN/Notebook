@@ -12,7 +12,7 @@ public class PersonPub_N {
 	private String phone;
 	private int age;
 	
-	// void : 반환럾음
+	// void : 반환없음
 	public void method() {
 		
 	}
@@ -29,7 +29,7 @@ class PersonDef {
 	private String phone;
 	private int age;
 	
-	// void : 반환럾음
+	// void : 반환없음
 	public void method() {
 		
 	}

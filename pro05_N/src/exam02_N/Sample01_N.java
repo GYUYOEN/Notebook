@@ -1,7 +1,8 @@
 package exam02_N;
 
-// imort exam01_N.*; : exam01_N에 있는 클래스명을 명시해주지 않아도 해당 패키지에 클래스를 다 사용할수 있도록 해줌
+// import exam01_N.*; : exam01_N에 있는 클래스명을 명시해주지 않아도 해당 패키지에 클래스를 다 사용할수 있도록 해줌
 // import java.util.*;
+
 import exam01_N.PersonPub_N;
 import exam01_N.PersonDef;
 

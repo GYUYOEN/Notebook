@@ -1,0 +1,74 @@
+package exam06_N;
+
+import java.util.Objects;
+
+public class Customer_N {
+	private String name;
+	private int age;
+	private char gender;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public char getGender() {
+		return gender;
+	}
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+	
+	public void buy(String productName, int price) {
+		System.out.printf("%s 상품을 %,d 원에 구입하였습니다.\n", productName, price);
+	}
+	
+	// 영수증 없을 때
+	public void refund() {
+		System.out.println("영수증 없이 환불 조치를 하였습니다.");
+	}
+	
+	// 영수증이라는 객체를 만들어야 더 정확함
+	// 영수증 있을 때
+	public void refund(String receipt) {
+		System.out.println("영수증을 확인하였습니다.");
+		System.out.printf("%s 물품을 환불 조치 합니다.\n", receipt);
+	}
+	
+	public Customer_N renewal() {
+		System.out.println("고객 정보를 갱신합니다.");
+		// 나자신을 다시 반환시켜줌
+		return this;
+	}
+	
+	@Override
+	public String toString() {
+		return "Customer_N [name=" + name + ", age=" + age + ", gender=" + gender + "]";
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, gender, name);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Customer_N other = (Customer_N) obj;
+		return age == other.age && gender == other.gender && Objects.equals(name, other.name);
+	}
+	
+	
+}
