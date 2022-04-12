@@ -8,6 +8,7 @@ import model.vo.Student_N;
 import model.vo.Teacher_N;
 
 public class LoginMenuManager_N {
+	
 /*
  * 해당 프로그햄을 사용하기 위한 로그인 기능(LoginMenuManager)을 추가하도록 한다.
  * 		1. 교사용 로그인
