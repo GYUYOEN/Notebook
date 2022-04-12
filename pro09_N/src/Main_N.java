@@ -5,7 +5,7 @@ import controller.LoginMenuManager_N;
 import controller.MenuManager_N;
 
 public class Main_N {
-
+	// 제일먼저 실행되는 곳, 봐야하는 곳
 	public static void main(String[] args) {
 		/*
 		 * 프로그램 시작 점

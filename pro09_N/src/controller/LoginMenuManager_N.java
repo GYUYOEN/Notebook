@@ -42,6 +42,31 @@ public class LoginMenuManager_N {
 		while(true) {
 			System.out.print(menu);
 			
+			// hasNextInt() 를 이용해 String 말고 int형으로 반환하기
+			// sc.nextInt()에 Enter 키 누르면 개행문자 \n도 들어감 
+			// -> int 말고 잘못 입력했다고 생각해 무한 반복이 될 수 있음
+			// 뒤에 sc.nextLine();를 붙여 \n을 없애둠
+//			int input = 0;
+//			while(true) {
+//				if(sc.hasNextInt()) {
+//					input = sc.nextInt();	sc.nextLine();
+//					break;
+//				}
+//				sc.nextInt();
+//			}
+//			
+//			switch(input) {
+//				case 1:
+//					teacherLogin();
+//				case 2:
+//					studentLogin();
+//				case 3:
+//					resetPassword();
+//				case 4:
+//					System.out.println("프로그램을 종료 합니다.");
+//					System.exit(0);
+//			}
+			
 			String input = sc.nextLine();
 			
 			if(input.equals("1")) {
